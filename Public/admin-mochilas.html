@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Mochilas | ALNOAN</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="Css/admin-mochilas.css">
+</head>
+<body>
+    <div class="admin-container">
+        <h1><i class="fas fa-backpack"></i> Administrar Mochilas</h1>
+        
+        <div class="header-actions">
+            <div class="search-box">
+                <input type="text" placeholder="Buscar mochilas..." style="padding: 10px; width: 300px; border-radius: 5px; border: 1px solid #ddd;">
+            </div>
+            <button class="btn btn-primary" id="add-product-btn">
+                <i class="fas fa-plus"></i> Agregar Mochila
+            </button>
+        </div>
+        
+        <table class="products-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Imagen</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Categoría</th>
+                    <th>Stock</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="products-table-body">
+                <!-- Los productos se cargarán aquí con JavaScript -->
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- Modal para agregar/editar -->
+    <div class="modal" id="product-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modal-title">Agregar Nueva Mochila</h2>
+            
+            <form id="product-form">
+                <input type="hidden" id="product-id">
+                
+                <div class="form-group">
+                    <label for="product-name">Nombre</label>
+                    <input type="text" id="product-name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="product-price">Precio (S/)</label>
+                    <input type="number" id="product-price" step="0.01" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="product-category">Categoría</label>
+                    <select id="product-category" required>
+                        <option value="">Seleccionar</option>
+                        <option value="urbana">Urbana</option>
+                        <option value="viaje">Viaje</option>
+                        <option value="escolar">Escolar</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="product-stock">Stock</label>
+                    <input type="number" id="product-stock" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="product-image">Imagen (URL)</label>
+                    <input type="text" id="product-image">
+                    <img src="" alt="Vista previa" class="product-image-preview" id="image-preview">
+                </div>
+                
+                <div class="form-group">
+                    <label for="product-description">Descripción</label>
+                    <textarea id="product-description" rows="3"></textarea>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn btn-danger" id="cancel-btn">Cancelar</button>
+                    <button type="submit" class="btn btn-success" id="save-btn">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="Js/admin-mochilas.js"></script>
+</body>
+</html>

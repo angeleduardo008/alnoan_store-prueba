@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Mochilas | ALNOAN</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="Css/catalogo.css">
+</head>
+<body>
+    <!-- Header del catálogo -->
+    <header class="catalog-header">
+        <h1>Catálogo de Mochilas</h1>
+        <p>Descubre nuestra colección exclusiva 2025</p>
+    </header>
+    
+    <!-- Filtros de búsqueda -->
+    <div class="filters">
+        <div class="filter-group">
+            <label for="category"><i class="fas fa-filter"></i></label>
+            <select id="category">
+                <option value="">Todas las categorías</option>
+                <option value="Niños">Niños</option>
+                <option value="Adolescentes">Adolescentes</option>
+                <option value="Adultos">Adultos</option>
+                
+            </select>
+        </div>
+        
+        <div class="filter-group">
+            <label for="price"><i class="fas fa-tag"></i></label>
+            <select id="price">
+                <option value="">Todos los precios</option>
+                <option value="0-100">S/ 0 - 100</option>
+                <option value="100-200">S/ 100 - 200</option>
+                <option value="200+">S/ 200+</option>
+            </select>
+        </div>
+        
+        <div class="filter-group">
+            <label for="search"><i class="fas fa-search"></i></label>
+            <input type="text" id="search" placeholder="Buscar mochilas...">
+        </div>
+    </div>
+    
+    <!-- Grid de productos -->
+    <div class="products-grid">
+        <!-- Producto 1 -->
+        <div class="product-card">
+            <img src="Img/mochila 1.jpeg" alt="Mochila clasica" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">Mochila clasica</h3>
+                <div class="product-price">S/ 120.00</div>
+                <div class="product-actions">
+                    <button class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Comprar</button>
+                    <button class="btn btn-secondary"><i class="far fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Producto 2 -->
+        <div class="product-card">
+            <img src="Img/mochila 2.jpeg" alt="Mochila Normal" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">Mochila Normal</h3>
+                <div class="product-price">S/ 90.00</div>
+                <div class="product-actions">
+                    <button class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Comprar</button>
+                    <button class="btn btn-secondary"><i class="far fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Producto 3 -->
+        <div class="product-card">
+            <img src="Img/mochila 3.jpeg" alt="Mochila Elegante" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">Mochila Elegante</h3>
+                <div class="product-price">S/ 100.00</div>
+                <div class="product-actions">
+                    <button class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Comprar</button>
+                    <button class="btn btn-secondary"><i class="far fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Paginación -->
+    <div class="pagination">
+        <a href="#" class="page-link"><i class="fas fa-chevron-left"></i></a>
+        <a href="#" class="page-link active">1</a>
+        <a href="#" class="page-link">2</a>
+        <a href="#" class="page-link">3</a>
+        <a href="#" class="page-link"><i class="fas fa-chevron-right"></i></a>
+    </div>
+    <script src="Js/catalogo.js"></script>
+</body>
+</html>
